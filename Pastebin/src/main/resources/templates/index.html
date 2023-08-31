@@ -11,7 +11,7 @@
 </head>
 <body>
 <!--    <div class="h-100 d-flex align-items-center justify-content-center">-->
-        <form style="margin-left: 100px" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
+        <form style="margin-top: 100px" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
             <textarea style="width: 500px; height: 300px; resize: none" th:field="*{name}" required></textarea>
             <br>
             <input style="margin-left: 800px;" class="btn btn-primary" type="submit" value="Submit" onclick="input()">
