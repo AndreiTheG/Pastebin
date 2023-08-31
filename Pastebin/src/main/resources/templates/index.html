@@ -18,11 +18,12 @@
             </form>
         </div>
     </nav>
-<!--    <div class="h-100 d-flex align-items-center justify-content-center">-->
-    <form style="margin-top: 100px" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
-        <textarea style="margin-left: 600px; width: 500px; height: 300px; resize: none" th:field="*{name}" required></textarea>
-        <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
-    </form>
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <form action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
+            <textarea th:field="*{name}" required></textarea>
+            <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
+        </form>
+    </div>
 <!--        <form style="margin-top: 0; margin-left: 800px" action="#" th:action="@{/text/list}" method="get">-->
 <!--            <input class="btn btn-danger" type="submit" value="See the list">-->
 <!--        </form>-->
