@@ -50,7 +50,7 @@ public class TextController {
         return "value";
     }
 
-    @GetMapping("/list")
+    @GetMapping("/list/")
     public String display(Model model) {
         model.addAttribute("texts", textRepository.findAll());
         return "display";
@@ -70,7 +70,7 @@ public class TextController {
         }
     }
 
-    @PostMapping("/list")
+    @PostMapping("/list/")
     public String postDisplay(@Valid Text text, Model model) {
         createTitleValue(text);
         textRepository.save(text);
