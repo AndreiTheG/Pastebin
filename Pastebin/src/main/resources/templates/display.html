@@ -10,18 +10,18 @@
 <body>
     <div th:switch="${texts}" class="container my-5">
         <div class="col-md-10">
-<!--            <h2 th:case="null">No text yet!</h2>-->
-<!--            <div th:case="*">-->
+            <h2 th:case="null">No text yet!</h2>
+            <div th:case="*">
 <!--                <div class="card">-->
 <!--                    <div class="card-body">-->
                         <div class="list-group"  th:each="text : ${texts}">
-<!--                            <li class="list-group-item list-group-item-action list-group-item-primary" th:each="text : ${texts}">-->
-                                <a th:href="@{/text/{id}(id=${text.id})}" th:text="${text.title}"></a>
-<!--                            </li>-->
+                            <li class="list-group-item list-group-item-action list-group-item-primary" th:each="text : ${texts}">
+                                <a th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
+                            </li>
                         </div>
 <!--                    </div>-->
 <!--                </div>-->
-<!--            </div>-->
+            </div>
         </div>
     </div>
 </body>
