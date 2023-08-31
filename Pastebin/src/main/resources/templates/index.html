@@ -13,10 +13,10 @@
         <nav class="navbar fixed-top bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Pastebin</a>
+                <form style="margin-top: 0; margin-left: 800px" action="#" th:action="@{/text/list}" method="get">
+                    <input class="btn btn-danger" type="submit" value="See the list">
+                </form>
             </div>
-            <form style="margin-top: 0; margin-left: 800px" action="#" th:action="@{/text/list}" method="get">
-                <input class="btn btn-danger" type="submit" value="See the list">
-            </form>
         </nav>
 <!--    <div class="h-100 d-flex align-items-center justify-content-center">-->
         <form style="margin-top: 100px" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
