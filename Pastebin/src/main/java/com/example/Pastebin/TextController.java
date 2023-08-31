@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/texts")
+@RequestMapping("/text")
 public class TextController {
 
 
@@ -83,6 +83,6 @@ public class TextController {
         model.addAttribute("text", text);
         createTitleValue(text);
         textRepository.save(text);
-        return "redirect:/texts/" + text.getId() + "";
+        return "redirect:/text/" + text.getId() + "";
     }
 }

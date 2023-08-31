@@ -17,7 +17,7 @@
                         <table class="table table-stripped">
                             <tbody>
                                 <tr th:each="text : ${texts}">
-                                    <td><a th:href="@{/texts/{id}(id=${text.id})}" th:text="${text.title}"></a></td>
+                                    <td><a th:href="@{/text/{id}(id=${text.id})}" th:text="${text.title}"></a></td>
                                 </tr>
                             </tbody>
                         </table>
