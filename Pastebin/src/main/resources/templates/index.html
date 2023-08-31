@@ -12,9 +12,9 @@
 <body>
     <nav class="navbar fixed-top bg-body-tertiary">
         <div class="container-fluid">
-            <form style="margin-top: 100px" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
-                <input style="margin-left: 800px;" class="btn btn-primary" type="submit" value="Submit" th:field="*{name}" onclick="input()">
-            </form>
+<!--            <form style="margin-top: 100px" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">-->
+                <input style="margin-left: 800px;" class="btn btn-primary" type="submit" value="Submit" onclick="input()">
+<!--            </form>-->
                 <!--        <a class="navbar-brand" href="#">Fixed top</a>-->
             <form action="#" th:action="@{/text/list}" method="get">
                 <input class="btn btn-danger" type="submit" value="See the list">
