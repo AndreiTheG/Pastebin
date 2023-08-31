@@ -14,13 +14,11 @@
             <div th:case="*">
                 <div class="card">
                     <div class="card-body">
-                        <table class="table table-stripped">
-                            <tbody>
-                                <tr th:each="text : ${texts}">
-                                    <td><a th:href="@{/text/{id}(id=${text.id})}" th:text="${text.title}"></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <ul class="table table-stripped">
+                            <li th:each="text : ${texts}">
+                                <a th:href="@{/text/{id}(id=${text.id})}" th:text="${text.title}"></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
