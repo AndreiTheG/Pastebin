@@ -9,14 +9,14 @@
     <script src="/script.js"></script>
 </head>
 <body>
-<!--    <nav class="navbar fixed-top bg-body-tertiary">-->
-<!--        <div class="container-fluid">-->
-<!--            <a class="navbar-brand" href="#">Pastebin</a>-->
+    <nav class="navbar fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pastebin</a>
             <form action="#" th:action="@{/text/list}" method="get">
                 <input class="btn btn-danger" type="submit" value="See the list">
             </form>
-<!--        </div>-->
-<!--    </nav>-->
+        </div>
+    </nav>
     <form style="margin-top: 100px" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
         <textarea style="margin-left: 400px; width: 800px; height: 500px; resize: none" th:field="*{name}" required></textarea>
         <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
