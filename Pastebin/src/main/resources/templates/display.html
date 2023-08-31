@@ -8,17 +8,19 @@
     <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTECn9o9b5PBBPTktP31ceR_ZUpIk1hKc_lsUBp2K83yQ&s">
 </head>
 <body>
-    <div class="container my-5">
+    <div th:switch="${texts}" class="container my-5">
         <div class="col-md-10">
             <h2 th:case="null">No text yet!</h2>
             <div th:case="*">
                 <div class="card">
                     <div class="card-body">
-                        <div class="list-group justify-content-center">
-                            <li class="list-group-item list-group-item-action list-group-item-primary" th:each="text : ${texts}">
-                                <a th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
-                            </li>
-                        </div>
+                        <table class="table table-stripped">
+                            <tbody>
+                                <tr th:each="text : ${texts}">
+                                    <td><a th:href="@{/texts/{id}(id=${text.id})}" th:text="${text.title}"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
