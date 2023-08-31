@@ -9,18 +9,18 @@
     <script src="/script.js"></script>
 </head>
 <body>
-    <div class="h-100 d-flex align-items-center justify-content-center">
+<!--    <div class="h-100 d-flex align-items-center justify-content-center">-->
         <form style="align-items: center" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
             <textarea style="width: 500px; height: 300px; resize: none" th:field="*{name}" required></textarea>
             <br>
-<!--            <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">-->
+            <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
         </form>
-        <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
-    </div>
-    <div class="h-100 d-flex align-items-center justify-content-center">
+<!--        <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">-->
+<!--    </div>-->
+<!--    <div class="h-100 d-flex align-items-center justify-content-center">-->
         <form action="#" th:action="@{/text/list}" method="get">
             <input class="btn btn-primary" type="submit" value="See the list">
         </form>
-    </div>
+<!--    </div>-->
 </body>
 </html>
