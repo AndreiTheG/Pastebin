@@ -8,6 +8,8 @@
     <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTECn9o9b5PBBPTktP31ceR_ZUpIk1hKc_lsUBp2K83yQ&s">
 </head>
 <body>
-    <textarea th:text="${text.name}" style="margin-left: 300px; width: 800px; height: 500px; resize: none" readonly></textarea>
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <textarea th:text="${text.name}" style="width: 800px; height: 500px; resize: none" readonly></textarea>
+    </div>
 </body>
 </html>
