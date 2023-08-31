@@ -12,10 +12,10 @@
 <!--        <div class="col-md-10">-->
 <!--            <h2 th:case="null">No text yet!</h2>-->
 <!--            <div th:case="*">-->
-                <div  class="list-group-item list-group-item-action list-group-item-primary"  th:each="text : ${texts}">
-<!--                    <li class="list-group-item list-group-item-action list-group-item-primary" th:each="text : ${texts}">-->
+                <div  class="list-group-item list-group-item-action list-group-item-primary">
+                    <li class="list-group-item list-group-item-action list-group-item-primary" th:each="text : ${texts}">
                         <a th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
-<!--                    </li>-->
+                    </li>
                 </div>
 <!--            </div>-->
 <!--        </div>-->
