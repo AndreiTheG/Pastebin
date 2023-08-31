@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/text/")
+@RequestMapping("/text")
 public class TextController {
 
 
@@ -36,21 +36,21 @@ public class TextController {
         return "index";
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public String getAText(Model model, @PathVariable("id") Long id) {
         Text text = textRepository.findById(id).orElseThrow();
         model.addAttribute("text", text);
         return "value";
     }
 
-    @PostMapping("{id}")
+    @PostMapping("/{id}")
     public String createAText(Model model, @PathVariable("id") Long id) {
         Text text = textRepository.findById(id).orElseThrow();
         model.addAttribute("text", text);
         return "value";
     }
 
-    @GetMapping("list")
+    @GetMapping("/list")
     public String display(Model model) {
         model.addAttribute("texts", textRepository.findAll());
         return "display";
@@ -70,7 +70,7 @@ public class TextController {
         }
     }
 
-    @PostMapping("list")
+    @PostMapping("/list")
     public String postDisplay(@Valid Text text, Model model) {
         createTitleValue(text);
         textRepository.save(text);
@@ -78,7 +78,7 @@ public class TextController {
         return "display";
     }
 
-    @PostMapping("result")
+    @PostMapping("/result")
     public String postTheValue(@Valid Text text, Model model) {
         model.addAttribute("text", text);
         createTitleValue(text);
