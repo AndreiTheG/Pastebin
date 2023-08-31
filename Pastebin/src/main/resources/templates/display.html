@@ -15,7 +15,7 @@
 <!--                <div class="card">-->
 <!--                    <div class="card-body">-->
                         <ul class="list-group">
-                            <li class="list-group-item" th:each="text : ${texts}">
+                            <li class="list-group-item-action list-group-item-primary" th:each="text : ${texts}">
                                 <a th:href="@{/text/{id}(id=${text.id})}" th:text="${text.title}"></a>
                             </li>
                         </ul>
