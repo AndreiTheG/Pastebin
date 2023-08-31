@@ -18,9 +18,11 @@
             </form>
         </div>
     </nav>
-    <form style="margin-top: 100px" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
-        <textarea style="margin-left: 600px; width: 800px; height: 500px; resize: none" th:field="*{name}" required></textarea>
-        <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
-    </form>
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <form style="margin-top: 100px" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
+            <textarea style="margin-left: 600px; width: 800px; height: 500px; resize: none" th:field="*{name}" required></textarea>
+            <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
+        </form>
+    </div>
 </body>
 </html>
