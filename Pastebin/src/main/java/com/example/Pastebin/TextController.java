@@ -36,14 +36,14 @@ public class TextController {
         return "index";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/:{id}")
     public String getAText(Model model, @PathVariable("id") Long id) {
         Text text = textRepository.findById(id).orElseThrow();
         model.addAttribute("text", text);
         return "value";
     }
 
-    @PostMapping("/{id}")
+    @PostMapping("/:{id}")
     public String createAText(Model model, @PathVariable("id") Long id) {
         Text text = textRepository.findById(id).orElseThrow();
         model.addAttribute("text", text);
@@ -83,6 +83,6 @@ public class TextController {
         model.addAttribute("text", text);
         createTitleValue(text);
         textRepository.save(text);
-        return "redirect:/text/" + text.getId() + "";
+        return "redirect:/text/:" + text.getId() + "";
     }
 }
