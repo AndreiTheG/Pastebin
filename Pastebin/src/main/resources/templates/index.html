@@ -14,7 +14,7 @@
         <form style="align-items: center" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
             <textarea style="width: 500px; height: 300px; resize: none" th:field="*{name}" required></textarea>
             <br>
-            <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
+            <input style=" margin-left: 300px;" class="btn btn-primary" type="submit" value="Submit" onclick="input()">
         </form>
         <form action="#" th:action="@{/text/list}" method="get">
             <input id="list" class="btn btn-primary" type="submit" value="See the list">
