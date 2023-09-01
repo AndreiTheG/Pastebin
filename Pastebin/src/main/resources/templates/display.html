@@ -20,6 +20,9 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown
                         </a>
+                        <ul  class="list-group" th:each="text : ${texts}">
+                            <a  class="list-group-item list-group-item-action list-group-item-primary" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
+                        </ul>
                     </li>
                 </ul>
             </div>
