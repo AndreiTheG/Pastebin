@@ -20,20 +20,8 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown
                         </a>
-                        <ul class="dropdown-menu">
-                    <!--        <li class="nav-item dropdown">-->
-<!--            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                Dropdown-->
-<!--            </a>-->
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <ul  class="list-group" th:each="text : ${texts}">
-                    <a  class="list-group-item list-group-item-action list-group-item-primary" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
+                    </li>
                 </ul>
-            </div>
-                        </ul>
-                            </li>
-                </ul>
-<!--            </li>-->
             </div>
         </div>
         </nav>
