@@ -23,7 +23,7 @@
                         </a>
                         <ul class="dropdown-menu scrollable-menu" role="menu">
                             <li th:each="text : ${texts}">
-                                <hr class="dropdown-divider">
+<!--                                <hr class="dropdown-divider">-->
                                 <a class="dropdown-item" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
 <!--                                <hr class="dropdown-divider">-->
                             </li>
