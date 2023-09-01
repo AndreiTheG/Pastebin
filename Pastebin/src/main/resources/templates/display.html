@@ -8,26 +8,36 @@
     <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTECn9o9b5PBBPTktP31ceR_ZUpIk1hKc_lsUBp2K83yQ&s">
 </head>
 <body>
-<!--    <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <!--        <li class="nav-item dropdown">-->
 <!--            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
 <!--                Dropdown-->
 <!--            </a>-->
-<!--            <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--                <ul  class="list-group" th:each="text : ${texts}">-->
-<!--                    <a  class="list-group-item list-group-item-action list-group-item-primary" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>-->
-<!--                </ul>-->
-<!--            </div>-->
-        <div th:switch="${texts}" class="container my-5">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul  class="list-group" th:each="text : ${texts}">
+                    <a  class="list-group-item list-group-item-action list-group-item-primary" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
+                </ul>
+            </div>
+<!--            </li>-->
+            </div>
+        </div>
+        </nav>
+<!--        <div th:switch="${texts}" class="container my-5">-->
 <!--            <div class="col-md-10">-->
 <!--                <h2 th:case="null">No text yet!</h2>-->
-                <div th:case="*">
-                    <ul  class="list-group" th:each="text : ${texts}">
-                        <a  class="list-group-item list-group-item-action list-group-item-primary" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
-                    </ul>
-                </div>
+<!--                <div th:case="*">-->
+<!--                    <ul  class="list-group" th:each="text : ${texts}">-->
+<!--                        <a  class="list-group-item list-group-item-action list-group-item-primary" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>-->
+<!--                    </ul>-->
+<!--                </div>-->
 <!--            </div>-->
-        </div>
+<!--        </div>-->
 <!--    </nav>-->
 </body>
 </html>
