@@ -18,7 +18,7 @@
 <!--                    <a  class="list-group-item list-group-item-action list-group-item-primary" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>-->
 <!--                </ul>-->
 <!--            </div>-->
-<!--        <div th:switch="${texts}" class="container my-5">-->
+        <div th:switch="${texts}" class="container my-5">
 <!--            <div class="col-md-10">-->
 <!--                <h2 th:case="null">No text yet!</h2>-->
                 <div th:case="*">
@@ -27,7 +27,7 @@
                     </ul>
                 </div>
 <!--            </div>-->
-<!--        </div>-->
+        </div>
 <!--    </nav>-->
 </body>
 </html>
