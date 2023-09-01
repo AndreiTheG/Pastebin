@@ -23,8 +23,9 @@
                         <ul class="dropdown-menu">
                             <li th:each="text : ${texts}">
                                 <a class="dropdown-item" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li><hr class="dropdown-divider"></li>
+<!--                            <li><hr class="dropdown-divider"></li>-->
                         </ul>
                     </li>
                 </ul>
