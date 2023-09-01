@@ -15,7 +15,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<!--        <li class="nav-item dropdown">-->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                    <!--        <li class="nav-item dropdown">-->
 <!--            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
 <!--                Dropdown-->
 <!--            </a>-->
@@ -24,6 +30,9 @@
                     <a  class="list-group-item list-group-item-action list-group-item-primary" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
                 </ul>
             </div>
+                        </ul>
+                            </li>
+                </ul>
 <!--            </li>-->
             </div>
         </div>
