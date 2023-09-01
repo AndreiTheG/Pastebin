@@ -20,27 +20,16 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown
                         </a>
-                        <ul  class="dropdown-menu">
-                            <li  th:each="text : ${texts}">
-                            <a class="dropdown-item" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
+                        <ul class="dropdown-menu">
+                            <li th:each="text : ${texts}">
+                                <a class="dropdown-item" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
-        </nav>
-<!--        <div th:switch="${texts}" class="container my-5">-->
-<!--            <div class="col-md-10">-->
-<!--                <h2 th:case="null">No text yet!</h2>-->
-<!--                <div th:case="*">-->
-<!--                    <ul  class="list-group" th:each="text : ${texts}">-->
-<!--                        <a  class="list-group-item list-group-item-action list-group-item-primary" th:href="@{/text/:{id}(id=${text.id})}" th:text="${text.title}"></a>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </nav>-->
+    </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
