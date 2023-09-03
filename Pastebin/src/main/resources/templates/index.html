@@ -21,7 +21,9 @@
         </div>
     </nav>
     <form style="margin-top: 100px" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
-        <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
+        <form class="form-inline">
+            <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
+        </form>
         <textarea style="margin-left: 400px; width: 800px; height: 500px; resize: none" th:field="*{name}" required></textarea>
 <!--        <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">-->
     </form>
