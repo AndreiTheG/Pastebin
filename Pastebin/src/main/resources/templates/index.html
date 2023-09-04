@@ -11,13 +11,9 @@
 <body>
     <nav class="navbar fixed-top bg-body-tertiary">
         <div class="container-fluid">
-<!--            <a class="navbar-brand" href="#">Pastebin</a>-->
-<!--            <form class="form-inline">-->
             <form action="#" th:action="@{/text/list}" method="get">
-<!--                <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">-->
                 <input class="btn btn-danger" type="submit" value="See the list">
             </form>
-<!--            </form>-->
         </div>
     </nav>
     <form style="margin-top: 100px" action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
@@ -25,7 +21,6 @@
         <form class="form-inline">
             <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
         </form>
-<!--        <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">-->
     </form>
 </body>
 </html>
