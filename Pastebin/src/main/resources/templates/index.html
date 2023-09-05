@@ -17,13 +17,15 @@
             </form>
         </div>
     </nav>
-    <div class="mx-auto col-10 col-md-8 col-lg-6">
-        <form action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
-            <textarea style="width: 800px; height: 500px; resize: none" th:field="*{name}" required></textarea>
-            <form class="form-inline">
-                <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
+    <div class="row align-items-center">
+        <div class="mx-auto col-10 col-md-8 col-lg-6">
+            <form action = "#" th:action="@{/text/result}"  th:object="${texts}" method="post">
+                <textarea style="width: 800px; height: 500px; resize: none" th:field="*{name}" required></textarea>
+                <form class="form-inline">
+                    <input class="btn btn-primary" type="submit" value="Submit" onclick="input()">
+                </form>
             </form>
-        </form>
+        </div>
     </div>
 </body>
 </html>
